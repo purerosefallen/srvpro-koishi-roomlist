@@ -1,0 +1,24 @@
+{
+  "name": "srvpro-koishi-roomlist",
+  "version": "1.0.0",
+  "description": "Room list for KoishiPro in SRVPro plugin ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purerosefallen/srvpro-koishi-roomlist.git"
+  },
+  "keywords": [
+    "srvpro",
+    "ygopro",
+    "koishipro"
+  ],
+  "author": "Nanahira",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/purerosefallen/srvpro-koishi-roomlist/issues"
+  },
+  "homepage": "https://github.com/purerosefallen/srvpro-koishi-roomlist#readme"
+}
