@@ -1,7 +1,7 @@
 ygopro.i18ns["en-us"].koishi_roomlist_hint = "Fetching room list ...";
 ygopro.i18ns["zh-cn"].koishi_roomlist_hint = "正在获取房间列表……";
 
-ygopro.ctos_follow_before("JOIN_GAME", true, (buffer, info, client, server, datas) => { 
+ygopro.ctos_follow_before("JOIN_GAME", true, async (buffer, info, client, server, datas) => { 
 	if (settings.modules.stop || CLIENT_is_able_to_reconnect(client) || CLIENT_is_able_to_kick_reconnect(client)) { 
 		return false;
 	}
