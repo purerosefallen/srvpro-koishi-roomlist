@@ -1,5 +1,6 @@
 ygopro.i18ns["en-us"].koishi_roomlist_hint = "Fetching room list ...";
 ygopro.i18ns["zh-cn"].koishi_roomlist_hint = "正在获取房间列表……";
+ygopro.reloadI18nR()
 ygopro.constants.STOC[49] = "KOISHI_ROOMLIST"
 
 ygopro.ctos_follow_before("JOIN_GAME", true, async (buffer, info, client, server, datas) => { 
@@ -76,13 +77,11 @@ ygopro.ctos_follow_before("JOIN_GAME", true, async (buffer, info, client, server
 			}
 		}
 		ygopro.stoc_send(client, "KOISHI_ROOMLIST", room_buffer);
-		setTimeout(() => {
-			ygopro.stoc_send(client, 'ERROR_MSG', {
-				msg: 1,
-				code: 9
-			});
-			CLIENT_kick(client);
-		}, 500);
+		ygopro.stoc_send(client, 'ERROR_MSG', {
+			msg: 1,
+			code: 9
+		});
+		CLIENT_kick(client);
 		return true;
 	}
 	return false;
